@@ -39,7 +39,6 @@ $ sudo raspi-config
 ... Choose `4 Localisation Options`
 ... Choose `I1 Change Locale`, to set your locale
 ... Choose `I2 Change Timezone`, to set your timezone
-... Choose `I3 Change Keyboard Layout`, to set your keyboard language
 
 == Initial Setup
 == Recommended Tweaks

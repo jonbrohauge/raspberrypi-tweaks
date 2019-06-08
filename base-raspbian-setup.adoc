@@ -1,0 +1,45 @@
+= Base Raspbian Setup
+Jon Brohauge <jonbrohauge@gmail.com>
+v1.0, 2019-06-08
+:toc:
+
+This document covers the basic setup and tweaks I always do to every one of my RaspberryPi installations.
+
+== Download
+If you do not have a preinstalled SDCard, download Raspbian from http://raspberrypi.org/downloads/raspbian[here].
+I recommend Raspbian Stretch Lite.
+
+== Flash
+Flash your SDCard using any of the methods that exist. I use either `dd` or https://www.balena.io/etcher/[balenaEtcher].
+
+Before you remove the SDCard from the computer you flashed the card on, go to the `BOOT` partition, and create an empty file called `SSH`.
+This will enable the SSH-server from first boot, thus removing the need to an external monitor and keyboard.
+
+== Install
+. Log on to your RaspberryPi, using the default login credentials, username: `pi`, and password: `raspberry`.
+. Change your password, by executing this command:
++
+[source,bash]
+----
+$ passwd
+----
+. Update the system, by executing this command:
++
+[source,bash]
+----
+$ sudo apt update && sudo apt upgrade -y
+$ sudo rpi-update
+----
+. Configure your RaspberryPi, by executing this command:
++
+----
+$ sudo raspi-config
+----
+.. To set your locale
+... Choose `4 Localisation Options`
+... Choose `I1 Change Locale`, to set your locale
+... Choose `I2 Change Timezone`, to set your timezone
+... Choose `I3 Change Keyboard Layout`, to set your keyboard language
+
+== Initial Setup
+== Recommended Tweaks

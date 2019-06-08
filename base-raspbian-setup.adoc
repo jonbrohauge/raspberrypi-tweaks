@@ -35,10 +35,18 @@ $ sudo rpi-update
 ----
 $ sudo raspi-config
 ----
+.. To set the device username
+... Choose `2 Network Options`
+.... Choose `N1 Hostname`, set the name you wish to use.
 .. To set your locale
 ... Choose `4 Localisation Options`
-... Choose `I1 Change Locale`, to set your locale
-... Choose `I2 Change Timezone`, to set your timezone
+.... Choose `I1 Change Locale`, to set your locale
+.... Choose `I2 Change Timezone`, to set your timezone
+.. To set memory allocation
+... Choose `7 Advanced Options`
+.... Choose `A3 Memory Split`, set the value to `16`, since you are not going to use the GPU
+.. Choose `<Finish>` to exit
+.. Reboot
 
 == Initial Setup
 == Recommended Tweaks

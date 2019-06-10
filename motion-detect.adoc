@@ -17,8 +17,16 @@ For installation instructions, and details on getting a clean Raspbian to run on
 
 
 == Motion Detection setup
-
-
-. Download and install latest Raspbian
+. Find your USB-connected camera, by execting:
++
+[source,bash]
+----
+$ lsusb
+$ usb-devices
+----
++
+. Notes:
+.. link:https://www.raspberrypi.org/documentation/usage/webcams/
+.. link:http://ask.xmodulo.com/install-usb-webcam-raspberry-pi.html
 . Install motion software
 .. Look at this guide for inspiration: https://greenido.wordpress.com/2018/10/09/raspberry-pi-as-security-camera-with-motion-detection/

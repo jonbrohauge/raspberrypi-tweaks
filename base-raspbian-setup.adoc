@@ -15,7 +15,7 @@ Flash your SDCard using any of the methods that exist. I use either `dd` or http
 Before you remove the SDCard from the computer you flashed the card on, go to the `BOOT` partition, and create an empty file called `SSH`.
 This will enable the SSH-server from first boot, thus removing the need to an external monitor and keyboard.
 
-== Install
+== Initial Setup
 . Log on to your RaspberryPi, using the default login credentials, username: `pi`, and password: `raspberry`.
 . Change your password, by executing this command:
 +
@@ -47,6 +47,3 @@ $ sudo raspi-config
 .... Choose `A3 Memory Split`, set the value to `16`, since you are not going to use the GPU
 .. Choose `<Finish>` to exit
 .. Reboot
-
-== Initial Setup
-== Recommended Tweaks

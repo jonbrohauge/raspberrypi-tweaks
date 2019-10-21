@@ -7,7 +7,7 @@ This document covers the basic setup and tweaks I always do to every one of my R
 
 == Download
 If you do not have a preinstalled SDCard, download Raspbian from http://raspberrypi.org/downloads/raspbian[here].
-I recommend Raspbian Stretch Lite.
+I recommend Raspbian Buster Lite.
 
 == Flash
 Flash your SDCard using any of the methods that exist. I use either `dd` or https://www.balena.io/etcher/[balenaEtcher].

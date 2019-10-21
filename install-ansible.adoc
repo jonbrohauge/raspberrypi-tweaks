@@ -102,6 +102,12 @@ $ npm -v
 ----
 $ sudo pip install docker-compose
 ----
+. Due to a bug in the python docker-client, you get a `ImportError: No module named ssl_match_hostname`. To fix this, execute this command:
++
+[source,bash]
+----
+$ sudo cp -r /usr/local/lib/python2.7/dist-packages/backports/ssl_match_hostname/ /usr/lib/python2.7/dist-packages/backports
+----
 . Verify that **docker-compose** works, by executing this command:
 +
 [source,bash]

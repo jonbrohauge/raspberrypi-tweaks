@@ -1,5 +1,12 @@
-After initial base setup
-Follow installation instructions from here: https://github.com/ansible/awx/blob/devel/INSTALL.md
+= Install ansible on Raspbian
+Jon Brohauge <jonbrohauge@gmail.com>
+v1.0, 2019-10-21
+:toc:
+
+== Base installation
+After initial base setup [link]. Follow the installation instructions from here: https://github.com/ansible/awx/blob/devel/INSTALL.md. Below are the raspian specific installation instructions, I use
+
+=== Raspbian installation steps
 
 #Ansible
 `sudo apt install ansible`

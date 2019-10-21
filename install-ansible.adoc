@@ -4,7 +4,7 @@ v1.0, 2019-10-21
 :toc:
 
 == Base installation
-After base-raspbian-setup.adoc[initial base setup]. Follow the installation instructions from https://github.com/ansible/awx/blob/devel/INSTALL.md[here]. Below are the raspian specific installation instructions, I use.
+After link:base-raspbian-setup.adoc[initial base setup]. Follow the installation instructions from https://github.com/ansible/awx/blob/devel/INSTALL.md[here]. Below are the raspian specific installation instructions, I use.
 
 == Install prerequisites
 To install some prerequisites needed during the installation, execute:

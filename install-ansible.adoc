@@ -8,11 +8,20 @@ After initial base setup [link]. Follow the installation instructions from here:
 
 === Raspbian installation steps
 
-#Ansible
+# Ansible
 `sudo apt install ansible`
 
-#Docker
+# Docker
 
 `curl -fsSL https://get.docker.com -o get-docker.sh | sudo sh get-docker.sh`
 
 `sudo usermod -aG docker pi` 
+
+test:
+
+`docker run hello-world`
+
+# docker python module
+First install pip
+`sudo apt install python-pip`
+pip install docker

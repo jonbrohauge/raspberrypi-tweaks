@@ -4,24 +4,107 @@ v1.0, 2019-10-21
 :toc:
 
 == Base installation
-After initial base setup [link]. Follow the installation instructions from here: https://github.com/ansible/awx/blob/devel/INSTALL.md. Below are the raspian specific installation instructions, I use
+After base-raspbian-setup.adoc[initial base setup]. Follow the installation instructions from https://github.com/ansible/awx/blob/devel/INSTALL.md[here]. Below are the raspian specific installation instructions, I use.
 
-=== Raspbian installation steps
+== Install prerequisites
+To install some prerequisites needed during the installation, execute:
+[source,bash]
+----
+$ sudo apt install git python-pip docker-compose libffi-dev libssl-dev
+----
 
-# Ansible
-`sudo apt install ansible`
+== Install Ansible
+To install ansible, execute:
+[source,bash]
+----
+$ sudo apt install ansible
+----
 
-# Docker
+== Install Docker
+. Download and install docker-ce via the install script provided by Docker, by executing this command:
++
+[source,bash]
+----
+$ curl -fsSL https://get.docker.com -o get-docker.sh | sudo sh get-docker.sh
+----
+. Clean up, by executing this command:
++
+[source,bash]
+----
+$ rm get-docker.sh
+----
+. Allow the user `pi` to run docker commands, by executing this command:
++
+[source,bash]
+----
+$ sudo usermod -aG docker pi
+----
+. Log out and back in to be able to use docker as the user `pi`.
+. Verify that **docker** works, by executing this command:
++
+[source,bash]
+----
+$ docker run hello-world
+----
 
-`curl -fsSL https://get.docker.com -o get-docker.sh | sudo sh get-docker.sh`
+== Install the docker python module
+To install the python docker module, execute:
+[source,bash]
+----
+$ pip install docker
+----
 
-`sudo usermod -aG docker pi` 
+== Install node and npm
+. Verify the processor type, by executing: `uname -m`. Mine came out as **armv7l**.
+. Select the proper node package to install from https://nodejs.org/en/download/[here].
+. Choose from "Linuz binaries (ARM)": **ARMv7** and get the URL (https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-armv7l.tar.xz)
+. Download the proper package, by executing this command:
++
+[source,bash]
+----
+$ wget https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-armv7l.tar.xz
+----
+. Unzip the package, by executing this command:
++
+[source,bash]
+----
+$ tar -xJf node-v12.13.0-linux-armv7l.tar.xz
+----
+. Copy node to the proper location, by executing this command:
++
+[source,bash]
+----
+$ cd node-v12.13.0-linux-armv7l && sudo cp -R * /usr/local/
+----
+. Clean up, by executing this command:
++
+[source,bash]
+----
+$ cd && rm -rf node-v12.13.0-linux-armv7l/ && rm node-v12.13.0-linux-armv7l.tar.xz
+----
+. Verify that **node** works, by executing this command:
++
+[source,bash]
+----
+$ node -v
+----
+. Verify that **npm** works, by executing this command:
++
+[source,bash]
+----
+$ npm -v
+----
 
-test:
-
-`docker run hello-world`
-
-# docker python module
-First install pip
-`sudo apt install python-pip`
-pip install docker
+== Install Docker Compose
+. Install **docker-compose**, by executing this command:
++
+[source,bash]
+----
+$ sudo pip install docker-compose
+----
+. Verify that **docker-compose** works, by executing this command:
++
+[source,bash]
+----
+$ docker-compose --version
+----

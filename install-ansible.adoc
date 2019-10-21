@@ -10,7 +10,7 @@ After base-raspbian-setup.adoc[initial base setup]. Follow the installation inst
 To install some prerequisites needed during the installation, execute:
 [source,bash]
 ----
-$ sudo apt install git python-pip docker-compose libffi-dev libssl-dev
+$ sudo apt install git python-pip dev libssl-dev
 ----
 
 == Install Ansible
@@ -21,7 +21,7 @@ $ sudo apt install ansible
 ----
 
 == Install Docker
-. Download and install docker-ce via the install script provided by Docker, by executing this command:
+. Download and install **docker-ce** via the install script provided by Docker, by executing this command:
 +
 [source,bash]
 ----
